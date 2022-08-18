@@ -1,6 +1,6 @@
 # funnycapitalism
 
-Barebones Discord bot library code used for a private bot
+Barebones Discord bot library code
 
 Notable features are:
 
@@ -8,3 +8,5 @@ Notable features are:
 - command macros with command data serialized into macrocache nodes
 - optional ETF support (at compile time)
 - concept instead of callback for event handling (not that it would improve performance)
+
+This is mostly an experiment. Better interface, performance, examples may come later.
