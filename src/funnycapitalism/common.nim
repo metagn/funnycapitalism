@@ -29,9 +29,9 @@ const
     ## Optional trace logs
 
 const
-  discordUserAgent* = "funnycapitalism (1.0 https://github.com/metagn/funnycapitalism)"
-  gatewayVersion* = 9
-  api* = ("https://discordapp.com/api/v" & $gatewayVersion & "/").parseUri()
+  discordUserAgent* {.strdefine.} = "funnycapitalism (1.0 https://github.com/metagn/funnycapitalism)"
+  discordGatewayVersion* {.intdefine.} = 9
+  api* = ("https://discordapp.com/api/v" & $discordGatewayVersion & "/").parseUri()
 
 type
   Intent* = enum

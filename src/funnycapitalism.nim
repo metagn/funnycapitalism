@@ -9,7 +9,7 @@ else:
 
 proc fetchGateway*(http: AsyncHttpClient): string =
   let x = http.get(api / "gateway")["url"].getStr()
-  result = x & ":443/?encoding=" & (if useEtf: "etf" else: "json") & "&v=" & $gatewayVersion
+  result = x & ":443/?encoding=" & (if useEtf: "etf" else: "json") & "&v=" & $discordGatewayVersion
 
 proc init*[T: Dispatcher](
     dispatcher: T,
