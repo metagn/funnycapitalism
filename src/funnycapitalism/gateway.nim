@@ -3,7 +3,7 @@ import lib/[wswrapper, zipwrapper], asyncdispatch, asyncnet, net, common, tables
 when useEtf:
   import lib/etf
   proc send*(ws: WebSocket, data: Term) {.async.} =
-    let s = toBytes(data)
+    let s = toEtf(data)
     when discordTrace:
       echo "sending " & $data
     await ws.send(s, opcode = Opcode.Binary)
